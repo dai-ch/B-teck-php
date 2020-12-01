@@ -32,21 +32,30 @@
     $buzzNum = $_POST['buzzNum'];
 
     //変数の値が空かどうか
-    if (empty($fizzNum) || empty($buzzNum)) {
-      echo "FizzNumかbuzzNumが空です<br>";
+    if (empty($fizzNum)) {
+      echo "FizzNumが空です<br>";
+      exit;
+    }
+    if (empty($buzzNum)) {
+      echo "buzzNumが空です<br>";
       exit;
     }
 
+
+
     //入力データが全て整数型かどうか判定する
-    if (!is_numeric($fizzNum) || !is_numeric($buzzNum)) {
-      echo "FizzNumかbuzzNumに文字列が入っています<br>";
+    if (!is_numeric($fizzNum)) {
+      echo "FizzNumに文字列が入っています<br>";
+      exit;
+    }
+    if (!is_numeric($buzzNum)) {
+      echo "buzzNumに文字列が入っています<br>";
       exit;
     }
 
     //int型orfloat型にキャスト変換する
     $fizzNum = $fizzNum * 1;
     $buzzNum = $buzzNum * 1;
-
 
 
     //$fizzNum = (int)$fizzNum;
