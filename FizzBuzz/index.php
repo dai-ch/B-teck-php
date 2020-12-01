@@ -41,6 +41,12 @@
       exit;
     }
 
+    // var_dump($fizzNum);
+    // var_dump(mb_convert_kana($fizzNum, 'n'));
+
+    //全角数字を半角にする
+    $fizzNum =  mb_convert_kana($fizzNum, 'n');
+    $buzzNum =  mb_convert_kana($buzzNum, 'n');
 
 
     //入力データが全て整数型かどうか判定する
@@ -56,6 +62,7 @@
     //int型orfloat型にキャスト変換する
     $fizzNum = $fizzNum * 1;
     $buzzNum = $buzzNum * 1;
+
 
 
     //$fizzNum = (int)$fizzNum;
@@ -75,9 +82,6 @@
       echo 'buzzNumは整数値で入力してください<br>';
       exit;
     }
-
-
-
 
 
     //1~99までカウントし、2つの変数の倍数になったら値を表示
