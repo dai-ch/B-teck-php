@@ -43,13 +43,19 @@
       exit;
     }
 
-    // $fizzNum = (int)$fizzNum;
+    //int型orfloat型にキャスト変換する
+    $fizzNum = $fizzNum * 1;
+    $buzzNum = $buzzNum * 1;
+
+
+
+    //$fizzNum = (int)$fizzNum;
     //$buzzNum = (int)$buzzNum;
-    // $fizzNum = (float)$fizzNum;
-    // $buzzNum = (float)$buzzNum;
     //var_dump(is_numeric($fizzNum));
     //var_dump($fizzNum);
     // var_dump(is_float($fizzNum));
+
+
 
     //小数点の有無を確認
     if (is_float($fizzNum)) {
